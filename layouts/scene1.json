@@ -1,8 +1,8 @@
 {
   "b": 0,
   "disableInputWhenNotFocused": true,
-  "mangledName": "New_32scene",
-  "name": "New scene",
+  "mangledName": "Scene1",
+  "name": "Scene1",
   "oglFOV": 90,
   "oglZFar": 500,
   "oglZNear": 1,
@@ -29,10 +29,21 @@
       "name": "RoidsWithText",
       "objects": [
         {
-          "name": "meteor"
+          "name": "Enemy"
         },
         {
+          "name": "enemypicked"
+        }
+      ]
+    },
+    {
+      "name": "CorWithText",
+      "objects": [
+        {
           "name": "wordpicked"
+        },
+        {
+          "name": "pickup"
         }
       ]
     }
@@ -114,16 +125,32 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "customSize": true,
+      "height": 72,
       "layer": "",
       "locked": false,
       "name": "ship",
       "persistentUuid": "3a78072c-6698-4a79-b607-6953defedd9f",
-      "width": 0,
+      "width": 63,
       "x": 411,
       "y": 521,
-      "zOrder": 6,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 959,
+      "layer": "",
+      "locked": false,
+      "name": "Background",
+      "persistentUuid": "ec636f97-a77f-4e2c-af75-3161ee6d7a13",
+      "width": 642,
+      "x": -2,
+      "y": 2,
+      "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -188,7 +215,7 @@
             },
             {
               "name": "9",
-              "value": "kiwi"
+              "value": "kiwifruit"
             }
           ]
         }
@@ -253,7 +280,7 @@
             },
             {
               "name": "7",
-              "value": "dirt"
+              "value": "kiwi"
             },
             {
               "name": "8",
@@ -315,7 +342,45 @@
       }
     },
     {
-      "name": "meteor",
+      "bold": false,
+      "italic": false,
+      "name": "EnemyTot",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "WordTot",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "EnemyPicked",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "WordPicked",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      }
+    },
+    {
+      "name": "Enemy",
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
@@ -339,7 +404,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "gfx\\meteorSmall.png",
+                  "image": "gfx\\NewObject-1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -359,6 +424,69 @@
           ]
         }
       ]
+    },
+    {
+      "name": "pickup",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [
+        {
+          "name": "LinearMovement",
+          "type": "LinearMovement::LinearMovement",
+          "SpeedX": 0,
+          "SpeedY": 20
+        }
+      ],
+      "animations": [
+        {
+          "name": "NewObject",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "gfx\\NewObject-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 22,
+                    "y": 22
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 22,
+                    "y": 22
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "enemypicked",
+      "tags": "",
+      "type": "BBText::BBText",
+      "variables": [],
+      "behaviors": [],
+      "content": {
+        "text": "[outline=red]words[/outline]",
+        "opacity": 255,
+        "fontSize": 20,
+        "visible": true,
+        "color": "#ffff00",
+        "fontFamily": "Arial",
+        "align": "center",
+        "wordWrap": true
+      }
     },
     {
       "name": "wordpicked",
@@ -565,6 +693,16 @@
       ]
     },
     {
+      "height": 400,
+      "name": "Background",
+      "tags": "",
+      "texture": "background.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 400,
+      "variables": [],
+      "behaviors": []
+    },
+    {
       "additive": false,
       "alphaParam": "Mutable",
       "angleParam": "Mutable",
@@ -626,6 +764,21 @@
     {
       "disabled": false,
       "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Correct Answers (PICK UPS)",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -671,7 +824,7 @@
           },
           "parameters": [
             "",
-            "\"create\""
+            "\"createPickUp\""
           ],
           "subInstructions": []
         }
@@ -702,8 +855,8 @@
           },
           "parameters": [
             "",
-            "Variable(T)",
-            "\"create\""
+            "Variable(WT)",
+            "\"createPickUp\""
           ],
           "subInstructions": []
         },
@@ -847,7 +1000,7 @@
           },
           "parameters": [
             "",
-            "meteor",
+            "pickup",
             "Variable(X)",
             "Variable(Y)",
             ""
@@ -860,7 +1013,7 @@
             "value": "SetAngle"
           },
           "parameters": [
-            "meteor",
+            "pickup",
             "=",
             "RandomInRange(20, 340)"
           ],
@@ -872,7 +1025,7 @@
             "value": "ChangeScale"
           },
           "parameters": [
-            "meteor",
+            "pickup",
             "=",
             "RandomFloatInRange(2.0, 3.0)"
           ],
@@ -885,7 +1038,7 @@
           },
           "parameters": [
             "",
-            "meteor",
+            "pickup",
             "wordpicked"
           ],
           "subInstructions": []
@@ -896,7 +1049,7 @@
             "value": "ModVarScene"
           },
           "parameters": [
-            "T",
+            "WT",
             "=",
             "RandomFloatInRange(4.0, 6.0)"
           ],
@@ -909,7 +1062,7 @@
           },
           "parameters": [
             "",
-            "\"create\""
+            "\"createPickUp\""
           ],
           "subInstructions": []
         }
@@ -920,7 +1073,7 @@
       "disabled": false,
       "folded": false,
       "type": "BuiltinCommonInstructions::ForEach",
-      "object": "meteor",
+      "object": "pickup",
       "conditions": [],
       "actions": [],
       "events": [
@@ -937,7 +1090,7 @@
               "parameters": [
                 "",
                 "wordpicked",
-                "meteor"
+                "pickup"
               ],
               "subInstructions": []
             }
@@ -951,9 +1104,9 @@
               "parameters": [
                 "wordpicked",
                 "=",
-                "meteor.X()-wordpicked.Width()/2",
+                "pickup.X() - wordpicked.Width() / 2",
                 "=",
-                "meteor.Y()-wordpicked.Height()/2"
+                "pickup.Y() - wordpicked.Height() / 2"
               ],
               "subInstructions": []
             }
@@ -961,6 +1114,597 @@
           "events": []
         }
       ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Wrong Answers (ENEMIES)",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "EnemyTot",
+            "=",
+            "12"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "EnemyPicked",
+            "=",
+            "1"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"createEnemy\""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "VarScene"
+          },
+          "parameters": [
+            "EnemyTot",
+            ">",
+            "0"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Timer"
+          },
+          "parameters": [
+            "",
+            "Variable(ET)",
+            "\"createEnemy\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": [],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "EnemyPicked",
+            "=",
+            "RandomInRange(1, Variable(EnemyTot))"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "TextObject::String"
+          },
+          "parameters": [
+            "WrongPickWave1",
+            "=",
+            "WrongPickWave1.VariableString(Wave1Wrong[ToString(Variable(EnemyPicked))])"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "TextObject::String"
+          },
+          "parameters": [
+            "EnemyPicked",
+            "=",
+            "VariableString(EnemyPicked)"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "TextObject::String"
+          },
+          "parameters": [
+            "EnemyTot",
+            "=",
+            "WrongPickWave1.VariableString(Wave1Wrong[ToString(Variable(EnemyTot))])"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarObjetTxt"
+          },
+          "parameters": [
+            "WrongPickWave1",
+            "Wave1Wrong[ToString(Variable(EnemyPicked))]",
+            "=",
+            "EnemyTot.String()"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "EnemyTot",
+            "-",
+            "1"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "X",
+            "=",
+            "RandomInRange(50,750)"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "Y",
+            "=",
+            "RandomInRange(-50,0)"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "enemypicked",
+            "Variable(X)-30",
+            "Variable(Y)-20",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "BBText::SetBBText"
+          },
+          "parameters": [
+            "enemypicked",
+            "=",
+            "WrongPickWave1.String()"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "Enemy",
+            "Variable(X)",
+            "Variable(Y)",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "SetAngle"
+          },
+          "parameters": [
+            "Enemy",
+            "=",
+            "RandomInRange(20, 340)"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ChangeScale"
+          },
+          "parameters": [
+            "Enemy",
+            "=",
+            "RandomFloatInRange(2.0, 3.0)"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "LinkedObjects::LinkObjects"
+          },
+          "parameters": [
+            "",
+            "Enemy",
+            "enemypicked"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "ET",
+            "=",
+            "RandomFloatInRange(4.0, 6.0)"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"createEnemy\""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "Enemy",
+      "conditions": [],
+      "actions": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "LinkedObjects::PickObjectsLinkedTo"
+              },
+              "parameters": [
+                "",
+                "enemypicked",
+                "Enemy"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "enemypicked",
+                "=",
+                "Enemy.X() - enemypicked.Width() / 2",
+                "=",
+                "Enemy.Y() - enemypicked.Height() / 2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "CollisionNP"
+          },
+          "parameters": [
+            "bullet",
+            "Enemy",
+            "",
+            "",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "LinkedObjects::PickObjectsLinkedTo"
+          },
+          "parameters": [
+            "",
+            "enemypicked",
+            "Enemy"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "explosion",
+            "Enemy.X()",
+            "Enemy.Y()",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "sound\\explo.wav",
+            "",
+            "50",
+            "RandomFloatInRange(0.5, 2.0)"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Delete"
+          },
+          "parameters": [
+            "RoidsWithText",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Delete"
+          },
+          "parameters": [
+            "bullet",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Player Controls",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "a"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "TopDownMovementBehavior::SimulateLeftKey"
+          },
+          "parameters": [
+            "ship",
+            "TopDownMovement"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "d"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "TopDownMovementBehavior::SimulateRightKey"
+          },
+          "parameters": [
+            "ship",
+            "TopDownMovement"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "w"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "TopDownMovementBehavior::SimulateUpKey"
+          },
+          "parameters": [
+            "ship",
+            "TopDownMovement"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "s"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "TopDownMovementBehavior::SimulateDownKey"
+          },
+          "parameters": [
+            "ship",
+            "TopDownMovement"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
     },
     {
       "disabled": false,
@@ -1030,98 +1774,34 @@
       "disabled": false,
       "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "CollisionNP"
-          },
-          "parameters": [
-            "bullet",
-            "meteor",
-            "",
-            "",
-            ""
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "LinkedObjects::PickObjectsLinkedTo"
-          },
-          "parameters": [
-            "",
-            "wordpicked",
-            "meteor"
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "explosion",
-            "meteor.X()",
-            "meteor.Y()",
-            ""
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "PlaySound"
-          },
-          "parameters": [
-            "",
-            "sound\\explo.wav",
-            "",
-            "50",
-            "RandomFloatInRange(0.5, 2.0)"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "Delete"
-          },
-          "parameters": [
-            "RoidsWithText",
-            ""
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "Delete"
-          },
-          "parameters": [
-            "bullet",
-            ""
-          ],
-          "subInstructions": []
-        }
-      ],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [],
       "events": []
     }
   ],
   "layers": [
+    {
+      "ambientLightColorB": 1702453580,
+      "ambientLightColorG": 1801675074,
+      "ambientLightColorR": 167797870,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "name": "Background",
+      "visibility": true,
+      "cameras": [],
+      "effects": [
+        {
+          "effectType": "Night",
+          "name": "Effect",
+          "doubleParameters": {
+            "intensity": 0.1,
+            "opacity": 0.6
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ]
+    },
     {
       "ambientLightColorB": 36,
       "ambientLightColorG": 6968752,

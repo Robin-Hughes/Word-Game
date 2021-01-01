@@ -9,17 +9,17 @@
   "properties": {
     "adaptGameResolutionAtRuntime": true,
     "folderProject": true,
-    "orientation": "landscape",
+    "orientation": "portrait",
     "packageName": "com.example.gamename",
     "projectUuid": "462de237-dc52-4b5b-88f9-d6acbed99221",
     "scaleMode": "nearest",
-    "sizeOnStartupMode": "adaptWidth",
+    "sizeOnStartupMode": "",
     "useExternalSourceFiles": false,
     "version": "1.0.0",
-    "name": "RobinGame",
-    "author": "Scott Jacobson",
-    "windowWidth": 800,
-    "windowHeight": 600,
+    "name": "Word Game",
+    "author": "Robin Hughes",
+    "windowWidth": 640,
+    "windowHeight": 960,
     "latestCompilationDirectory": "",
     "maxFPS": 60,
     "minFPS": 20,
@@ -155,6 +155,24 @@
         "metadata": "",
         "name": "sound\\explo.wav",
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/NewObject-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\NewObject-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "background.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "background.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -165,7 +183,7 @@
   "layouts": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/layouts/new-scene"
+      "referenceTo": "/layouts/scene1"
     }
   ],
   "externalEvents": [],
