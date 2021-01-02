@@ -173,6 +173,159 @@
         "name": "background.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewObject-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewObject-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "meteorSmall.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "meteorSmall.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "player.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "player.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "ship-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ship-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "life-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "life-3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "life-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "life-2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "life-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "life-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "life-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "life-0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "MonsterIdle-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "MonsterIdle-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "MonsterIdle-1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "MonsterIdle-1-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "btn-try-again-normal.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "btn-try-again-normal.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "btn-try-again-hover.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "btn-try-again-hover.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "btn-try-again-pressed.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "btn-try-again-pressed.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "btn-main-menu-hover.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "btn-main-menu-hover.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "btn-main-menu-normal.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "btn-main-menu-normal.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "btn-main-menu-pressed.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "btn-main-menu-pressed.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "game-over.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "game-over.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -183,11 +336,15 @@
   "layouts": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/layouts/scene1"
+      "referenceTo": "/layouts/level1"
     }
   ],
   "externalEvents": [],
   "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/health"
+    },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/stayonscreen"
