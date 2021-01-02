@@ -326,21 +326,265 @@
         "name": "game-over.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/ShipDead.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\ShipDead.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/ShipAlive.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\ShipAlive.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/game-over.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\game-over.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/btn-main-menu-normal.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\btn-main-menu-normal.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/btn-main-menu-pressed.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\btn-main-menu-pressed.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/btn-main-menu-hover.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\btn-main-menu-hover.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/Menu/btn-try-again-normal.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\Menu\\btn-try-again-normal.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/Menu/btn-try-again-hover.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\Menu\\btn-try-again-hover.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/Menu/btn-try-again-pressed.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\Menu\\btn-try-again-pressed.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/background.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\background.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/Menu/btn-main-menu-normal.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\Menu\\btn-main-menu-normal.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/Menu/btn-main-menu-hover.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\Menu\\btn-main-menu-hover.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/Menu/btn-main-menu-pressed.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\Menu\\btn-main-menu-pressed.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/Menu/game-over.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\Menu\\game-over.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/life-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\life-3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/life-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\life-2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/life-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\life-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/life-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\life-0.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/Home/game-title.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\Home\\game-title.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/Home/btn-start-normal.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\Home\\btn-start-normal.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/Home/btn-start-hover.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\Home\\btn-start-hover.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/Home/btn-start-pressed.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\Home\\btn-start-pressed.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "sound/monster.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sound\\monster.wav",
+        "userAdded": true
+      },
+      {
+        "file": "sound/killed.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sound\\killed.wav",
+        "userAdded": true
+      },
+      {
+        "file": "sound/sfx_lose.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sound\\sfx_lose.ogg",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
   },
   "objects": [],
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "SceneNumber",
+      "value": "0"
+    }
+  ],
   "layouts": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/home"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/level1"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/level2"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/level3"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/new-scene"
     }
   ],
   "externalEvents": [],
   "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/flash"
+    },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/health"

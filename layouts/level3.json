@@ -1,8 +1,8 @@
 {
   "b": 0,
   "disableInputWhenNotFocused": true,
-  "mangledName": "Level1",
-  "name": "Level1",
+  "mangledName": "Level3",
+  "name": "Level3",
   "oglFOV": 90,
   "oglZFar": 500,
   "oglZNear": 1,
@@ -44,23 +44,6 @@
         },
         {
           "name": "pickup"
-        }
-      ]
-    },
-    {
-      "name": "Meteors",
-      "objects": [
-        {
-          "name": "target"
-        },
-        {
-          "name": "pickup"
-        },
-        {
-          "name": "wordpicked"
-        },
-        {
-          "name": "enemypicked"
         }
       ]
     }
@@ -282,11 +265,11 @@
       "height": 0,
       "layer": "",
       "locked": false,
-      "name": "SceneTitle",
-      "persistentUuid": "e3d6e43e-4bbb-4327-8c05-cd898d28f63f",
+      "name": "SceneTimer",
+      "persistentUuid": "ad88a25c-05ce-4641-a990-71a80f85ac00",
       "width": 0,
-      "x": 477,
-      "y": 890,
+      "x": 260,
+      "y": 17,
       "zOrder": 13,
       "numberProperties": [],
       "stringProperties": [],
@@ -298,11 +281,11 @@
       "height": 0,
       "layer": "",
       "locked": false,
-      "name": "SceneTimer",
-      "persistentUuid": "a5045311-7d82-4deb-a83b-dacdc7d494b6",
+      "name": "SceneTitle",
+      "persistentUuid": "bf61480e-43f0-4df7-aa02-66d7dc964351",
       "width": 0,
-      "x": 265,
-      "y": 19,
+      "x": 459,
+      "y": 888,
       "zOrder": 14,
       "numberProperties": [],
       "stringProperties": [],
@@ -633,7 +616,7 @@
       "content": {
         "text": "[outline=red]words[/outline]",
         "opacity": 255,
-        "fontSize": 15,
+        "fontSize": 20,
         "visible": true,
         "color": "#ffff00",
         "fontFamily": "Arial",
@@ -650,7 +633,7 @@
       "content": {
         "text": "[outline=red]words[/outline]",
         "opacity": 255,
-        "fontSize": 15,
+        "fontSize": 20,
         "visible": true,
         "color": "#ffff00",
         "fontFamily": "Arial",
@@ -798,13 +781,6 @@
           "HasJustFired": false
         },
         {
-          "name": "Flash",
-          "type": "Flash::Flash",
-          "HalfPeriodTime": 0.1,
-          "IsFlashing": false,
-          "FlashDuration": 0
-        },
-        {
           "name": "Health",
           "type": "Health::Health",
           "Health": 3,
@@ -816,13 +792,12 @@
         {
           "name": "StayOnScreen",
           "type": "StayOnScreen::StayOnScreen",
-          "MarginTop": 45,
-          "MarginBottom": 100,
-          "MarginLeft": 5,
-          "MarginRight": 110
+          "MarginTop": 10,
+          "MarginBottom": 50,
+          "MarginLeft": 0,
+          "MarginRight": 20
         },
         {
-          "maxSpeed": 500,
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior",
           "acceleration": 800,
@@ -831,6 +806,7 @@
           "angularMaxSpeed": 180,
           "deceleration": 800,
           "ignoreDefaultControls": false,
+          "maxSpeed": 300,
           "rotateObject": false
         }
       ],
@@ -1003,25 +979,6 @@
     {
       "bold": true,
       "italic": false,
-      "name": "SceneTimer",
-      "smoothed": true,
-      "tags": "",
-      "type": "TextObject::Text",
-      "underlined": false,
-      "variables": [],
-      "behaviors": [],
-      "string": "120",
-      "font": "",
-      "characterSize": 50,
-      "color": {
-        "b": 28,
-        "g": 212,
-        "r": 248
-      }
-    },
-    {
-      "bold": true,
-      "italic": false,
       "name": "SceneTitle",
       "smoothed": true,
       "tags": "",
@@ -1036,6 +993,25 @@
         "b": 0,
         "g": 0,
         "r": 0
+      }
+    },
+    {
+      "bold": true,
+      "italic": false,
+      "name": "SceneTimer",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "120",
+      "font": "",
+      "characterSize": 50,
+      "color": {
+        "b": 28,
+        "g": 212,
+        "r": 248
       }
     },
     {
@@ -1630,7 +1606,7 @@
           "parameters": [
             "target",
             "=",
-            "RandomFloatInRange(1.5, 2.0)"
+            "RandomFloatInRange(2.0, 3.0)"
           ],
           "subInstructions": []
         },
@@ -1793,7 +1769,7 @@
               },
               "parameters": [
                 "",
-                "sound\\sfx_lose.ogg",
+                "monster.wav",
                 "no",
                 "50",
                 ""
@@ -2252,7 +2228,7 @@
           "parameters": [
             "pickup",
             "=",
-            "RandomFloatInRange(1.5, 2.0)"
+            "RandomFloatInRange(2.0, 3.0)"
           ],
           "subInstructions": []
         },
@@ -2375,7 +2351,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Delete the pickup that was eaten and update the score",
+          "comment": "Delete the shape that was eaten and update the score",
           "comment2": ""
         },
         {
@@ -2415,7 +2391,7 @@
               },
               "parameters": [
                 "",
-                "sound\\monster.wav",
+                "monster.wav",
                 "no",
                 "50",
                 ""
@@ -2430,7 +2406,7 @@
               "parameters": [
                 "Score",
                 "+",
-                "2"
+                "1"
               ],
               "subInstructions": []
             },
@@ -2724,19 +2700,8 @@
             "value": "Delete"
           },
           "parameters": [
-            "SceneTimer",
+            "Text1",
             ""
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "RemoveTimer"
-          },
-          "parameters": [
-            "",
-            "\"countdown\""
           ],
           "subInstructions": []
         }
@@ -2866,7 +2831,7 @@
                   },
                   "parameters": [
                     "",
-                    "CurrentSceneName()",
+                    "\"Level1\"",
                     ""
                   ],
                   "subInstructions": []
@@ -3013,29 +2978,6 @@
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "NEXT LEVEL",
-      "comment2": ""
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [],
-      "events": []
-    },
-    {
       "colorB": 228,
       "colorG": 176,
       "colorR": 74,
@@ -3082,7 +3024,7 @@
               "parameters": [
                 "timer_number",
                 "=",
-                "120"
+                "60"
               ],
               "subInstructions": []
             }
@@ -3157,23 +3099,11 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ModVarGlobal"
-              },
-              "parameters": [
-                "SceneNumber",
-                "=",
-                "2"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "Scene"
               },
               "parameters": [
                 "",
-                "\"Level\" + ToString(GlobalVariable(SceneNumber))",
+                "\"Level2\"",
                 ""
               ],
               "subInstructions": []
@@ -3467,7 +3397,7 @@
             "Player.PointY(\"Shoot\")",
             "bullet",
             "270",
-            "600",
+            "500",
             ""
           ],
           "subInstructions": []
@@ -3492,80 +3422,9 @@
     {
       "disabled": false,
       "folded": false,
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Progressively increase game speed",
-      "comment2": ""
-    },
-    {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "TiledSpriteObject::YOffset"
-          },
-          "parameters": [
-            "Background",
-            "+",
-            "-40*TimeDelta()"
-          ],
-          "subInstructions": []
-        }
-      ],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "ModVarScene"
-          },
-          "parameters": [
-            "GameSpeed",
-            "+",
-            "7*TimeDelta()"
-          ],
-          "subInstructions": []
-        }
-      ],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "AddForceAL"
-          },
-          "parameters": [
-            "Meteors",
-            "90",
-            "1.1*Variable(GameSpeed)",
-            ""
-          ],
-          "subInstructions": []
-        }
-      ],
+      "actions": [],
       "events": []
     }
   ],
@@ -3629,10 +3488,6 @@
     {
       "name": "FireBullet",
       "type": "FireBullet::FireBullet"
-    },
-    {
-      "name": "Flash",
-      "type": "Flash::Flash"
     },
     {
       "name": "Health",

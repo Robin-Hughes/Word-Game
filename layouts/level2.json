@@ -1,8 +1,8 @@
 {
   "b": 0,
   "disableInputWhenNotFocused": true,
-  "mangledName": "Level1",
-  "name": "Level1",
+  "mangledName": "Level2",
+  "name": "Level2",
   "oglFOV": 90,
   "oglZFar": 500,
   "oglZNear": 1,
@@ -324,51 +324,51 @@
           "children": [
             {
               "name": "1",
-              "value": "apple"
+              "value": "have fun"
             },
             {
               "name": "10",
-              "value": "apricot"
+              "value": "eat ice cream"
             },
             {
               "name": "11",
-              "value": "lemon"
+              "value": "run"
             },
             {
               "name": "12",
-              "value": "cherry"
+              "value": "jump"
             },
             {
               "name": "2",
-              "value": "pear"
+              "value": "sing"
             },
             {
               "name": "3",
-              "value": "peach"
+              "value": "write"
             },
             {
               "name": "4",
-              "value": "grape"
+              "value": "play games"
             },
             {
               "name": "5",
-              "value": "banana"
+              "value": "learn english"
             },
             {
               "name": "6",
-              "value": "plum"
+              "value": "swim"
             },
             {
               "name": "7",
-              "value": "raspberry"
+              "value": "laugh"
             },
             {
               "name": "8",
-              "value": "strawberry"
+              "value": "drink water"
             },
             {
               "name": "9",
-              "value": "kiwifruit"
+              "value": "sit down"
             }
           ]
         }
@@ -397,51 +397,51 @@
           "children": [
             {
               "name": "1",
-              "value": "rock"
+              "value": "water"
             },
             {
               "name": "10",
-              "value": "beans"
+              "value": "down"
             },
             {
               "name": "11",
-              "value": "lettuce"
+              "value": "laughs"
             },
             {
               "name": "12",
-              "value": "cabbage"
+              "value": "plays"
             },
             {
               "name": "2",
-              "value": "corn"
+              "value": "swimming"
             },
             {
               "name": "3",
-              "value": "asparagus"
+              "value": "english"
             },
             {
               "name": "4",
-              "value": "carrots"
+              "value": "writing"
             },
             {
               "name": "5",
-              "value": "potato"
+              "value": "sings"
             },
             {
               "name": "6",
-              "value": "celery"
+              "value": "jumped"
             },
             {
               "name": "7",
-              "value": "kiwi"
+              "value": "ran"
             },
             {
               "name": "8",
-              "value": "candy"
+              "value": "ice cream"
             },
             {
               "name": "9",
-              "value": "chocolate"
+              "value": "funny"
             }
           ]
         }
@@ -822,9 +822,9 @@
           "MarginRight": 110
         },
         {
-          "maxSpeed": 500,
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior",
+          "maxSpeed": 500,
           "acceleration": 800,
           "allowDiagonals": true,
           "angleOffset": 0,
@@ -917,7 +917,7 @@
       "underlined": false,
       "variables": [],
       "behaviors": [],
-      "string": "Fruit",
+      "string": "I want to ______",
       "font": "",
       "characterSize": 30,
       "color": {
@@ -1373,6 +1373,18 @@
             "0"
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "WS",
+            "=",
+            "1\n"
+          ],
+          "subInstructions": []
         }
       ],
       "events": []
@@ -1554,7 +1566,7 @@
           "parameters": [
             "eX",
             "=",
-            "RandomInRange(50,640-80)"
+            "RandomInRange(50, 640-80)"
           ],
           "subInstructions": []
         },
@@ -1652,9 +1664,21 @@
             "value": "ModVarScene"
           },
           "parameters": [
+            "WS",
+            "*",
+            "0.97"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
             "ET",
             "=",
-            "RandomFloatInRange(4.0, 6.0)"
+            "RandomFloatInRange(4.0, 6.0)*(Variable(WS))"
           ],
           "subInstructions": []
         },
@@ -1995,6 +2019,18 @@
             "0"
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "CS",
+            "=",
+            "1.0"
+          ],
+          "subInstructions": []
         }
       ],
       "events": []
@@ -2011,8 +2047,8 @@
           },
           "parameters": [
             "WordTot",
-            "=",
-            "0"
+            "<",
+            "1"
           ],
           "subInstructions": []
         }
@@ -2274,9 +2310,21 @@
             "value": "ModVarScene"
           },
           "parameters": [
+            "CS",
+            "*",
+            "0.97"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
             "WT",
             "=",
-            "RandomFloatInRange(4.0, 6.0)"
+            "RandomFloatInRange(4.0, 6.0)*(Variable(CS))"
           ],
           "subInstructions": []
         },
@@ -3162,7 +3210,7 @@
               "parameters": [
                 "SceneNumber",
                 "=",
-                "2"
+                "3"
               ],
               "subInstructions": []
             },
@@ -3560,7 +3608,7 @@
           "parameters": [
             "Meteors",
             "90",
-            "1.1*Variable(GameSpeed)",
+            "1.05*Variable(GameSpeed)",
             ""
           ],
           "subInstructions": []
