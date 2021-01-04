@@ -1,8 +1,8 @@
 {
   "b": 0,
   "disableInputWhenNotFocused": true,
-  "mangledName": "Level1",
-  "name": "Level1",
+  "mangledName": "Level4",
+  "name": "Level4",
   "oglFOV": 90,
   "oglZFar": 500,
   "oglZNear": 1,
@@ -22,7 +22,7 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.856
+    "zoomFactor": 0.784
   },
   "objectsGroups": [
     {
@@ -324,53 +324,73 @@
           "children": [
             {
               "name": "1",
-              "value": "apple"
+              "value": "have fun"
             },
             {
               "name": "10",
-              "value": "apricot"
+              "value": "eat ice cream"
             },
             {
               "name": "11",
-              "value": "lemon"
+              "value": "run"
             },
             {
               "name": "12",
-              "value": "cherry"
+              "value": "jump"
             },
             {
               "name": "2",
-              "value": "pear"
+              "value": "sing"
             },
             {
               "name": "3",
-              "value": "peach"
+              "value": "write"
             },
             {
               "name": "4",
-              "value": "grape"
+              "value": "play games"
             },
             {
               "name": "5",
-              "value": "banana"
+              "value": "learn english"
             },
             {
               "name": "6",
-              "value": "plum"
+              "value": "swim"
             },
             {
               "name": "7",
-              "value": "raspberry"
+              "value": "laugh"
             },
             {
               "name": "8",
-              "value": "strawberry"
+              "value": "drink water"
             },
             {
               "name": "9",
-              "value": "kiwifruit"
+              "value": "sit down"
             }
           ]
+        },
+        {
+          "name": "WordTot",
+          "value": "12"
+        },
+        {
+          "name": "WordCurrent",
+          "value": "1"
+        },
+        {
+          "name": "Dummy",
+          "value": ""
+        },
+        {
+          "name": "Cpick1",
+          "value": ""
+        },
+        {
+          "name": "Cpick2",
+          "value": ""
         }
       ],
       "behaviors": [],
@@ -397,51 +417,51 @@
           "children": [
             {
               "name": "1",
-              "value": "rock"
+              "value": "water"
             },
             {
               "name": "10",
-              "value": "beans"
+              "value": "down"
             },
             {
               "name": "11",
-              "value": "lettuce"
+              "value": "laughs"
             },
             {
               "name": "12",
-              "value": "cabbage"
+              "value": "plays"
             },
             {
               "name": "2",
-              "value": "corn"
+              "value": "swimming"
             },
             {
               "name": "3",
-              "value": "asparagus"
+              "value": "english"
             },
             {
               "name": "4",
-              "value": "carrots"
+              "value": "writing"
             },
             {
               "name": "5",
-              "value": "potato"
+              "value": "sings"
             },
             {
               "name": "6",
-              "value": "celery"
+              "value": "jumped"
             },
             {
               "name": "7",
-              "value": "kiwi"
+              "value": "ran"
             },
             {
               "name": "8",
-              "value": "candy"
+              "value": "ice cream"
             },
             {
               "name": "9",
-              "value": "chocolate"
+              "value": "funny"
             }
           ]
         }
@@ -917,7 +937,7 @@
       "underlined": false,
       "variables": [],
       "behaviors": [],
-      "string": "Fruit",
+      "string": "I want to ______",
       "font": "",
       "characterSize": 30,
       "color": {
@@ -975,7 +995,7 @@
       "height": 400,
       "name": "Background",
       "tags": "",
-      "texture": "gfx\\background.png",
+      "texture": "gfx\\stars.jpg",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 400,
       "variables": [],
@@ -1033,9 +1053,9 @@
       "font": "",
       "characterSize": 40,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 255,
+        "g": 255,
+        "r": 255
       }
     },
     {
@@ -1276,6 +1296,107 @@
       "alphaParam": "Mutable",
       "angleParam": "Mutable",
       "blueParam": "Random",
+      "destroyWhenNoParticles": false,
+      "emissionEditionSimpleMode": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 10,
+      "emitterForceMax": 85,
+      "emitterForceMin": 45,
+      "emitterXDirection": 0,
+      "emitterYDirection": 1,
+      "emitterZDirection": 0,
+      "flow": 50,
+      "friction": 2,
+      "gravityEditionSimpleMode": true,
+      "greenParam": "Random",
+      "maxParticleNb": 50,
+      "name": "thrust",
+      "particleAlpha1": 204,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 255,
+      "particleBlue2": 255,
+      "particleEditionSimpleMode": true,
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGravityZ": 0,
+      "particleGreen1": 35,
+      "particleGreen2": 255,
+      "particleLifeTimeMax": 2.5,
+      "particleLifeTimeMin": 0.5,
+      "particleRed1": 4,
+      "particleRed2": 255,
+      "particleSize1": 100,
+      "particleSize2": 200,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "redParam": "Enabled",
+      "rendererParam1": 3,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "sizeParam": "Mutable",
+      "tags": "",
+      "tank": -1,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 3,
+      "variables": [],
+      "behaviors": []
+    },
+    {
+      "name": "shield",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "gfx\\shield.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 75,
+                    "y": 90
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 75,
+                    "y": 90
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "additive": false,
+      "alphaParam": "Mutable",
+      "angleParam": "Mutable",
+      "blueParam": "Random",
       "destroyWhenNoParticles": true,
       "emissionEditionSimpleMode": true,
       "emitterAngleA": 0,
@@ -1371,6 +1492,18 @@
             "EnemyTot",
             "=",
             "0"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "WS",
+            "=",
+            "1\n"
           ],
           "subInstructions": []
         }
@@ -1554,7 +1687,7 @@
           "parameters": [
             "eX",
             "=",
-            "RandomInRange(50,640-80)"
+            "RandomInRange(50, 640-80)"
           ],
           "subInstructions": []
         },
@@ -1652,9 +1785,21 @@
             "value": "ModVarScene"
           },
           "parameters": [
+            "WS",
+            "*",
+            "0.97"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
             "ET",
             "=",
-            "RandomFloatInRange(4.0, 6.0)"
+            "RandomFloatInRange(4.0, 6.0)*(Variable(WS))"
           ],
           "subInstructions": []
         },
@@ -1995,6 +2140,18 @@
             "0"
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "CS",
+            "=",
+            "1.0"
+          ],
+          "subInstructions": []
         }
       ],
       "events": []
@@ -2011,8 +2168,8 @@
           },
           "parameters": [
             "WordTot",
-            "=",
-            "0"
+            "<",
+            "1"
           ],
           "subInstructions": []
         }
@@ -2274,9 +2431,21 @@
             "value": "ModVarScene"
           },
           "parameters": [
+            "CS",
+            "*",
+            "0.97"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
             "WT",
             "=",
-            "RandomFloatInRange(4.0, 6.0)"
+            "RandomFloatInRange(4.0, 6.0)*(Variable(CS))"
           ],
           "subInstructions": []
         },
@@ -3162,7 +3331,7 @@
               "parameters": [
                 "SceneNumber",
                 "=",
-                "2"
+                "3"
               ],
               "subInstructions": []
             },
@@ -3560,7 +3729,7 @@
           "parameters": [
             "Meteors",
             "90",
-            "1.1*Variable(GameSpeed)",
+            "1.05*Variable(GameSpeed)",
             ""
           ],
           "subInstructions": []
@@ -3649,6 +3818,10 @@
     {
       "name": "TopDownMovement",
       "type": "TopDownMovementBehavior::TopDownMovementBehavior"
+    },
+    {
+      "name": "Tween",
+      "type": "Tween::TweenBehavior"
     }
   ]
 }

@@ -1,16 +1,16 @@
 {
-  "b": 94,
+  "b": 122,
   "disableInputWhenNotFocused": true,
   "mangledName": "Home",
   "name": "Home",
   "oglFOV": 90,
   "oglZFar": 500,
   "oglZNear": 1,
-  "r": 77,
+  "r": 0,
   "standardSortMethod": true,
   "stopSoundsOnStartup": true,
   "title": "",
-  "v": 0,
+  "v": 56,
   "uiSettings": {
     "grid": false,
     "gridB": 255,
@@ -22,27 +22,11 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.76
+    "zoomFactor": 0.736
   },
   "objectsGroups": [],
   "variables": [],
   "instances": [
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "GameTitle",
-      "persistentUuid": "122e3dd2-24b5-45b4-9dde-1ae7a54919d1",
-      "width": 0,
-      "x": 33,
-      "y": 148,
-      "zOrder": 1,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
     {
       "angle": 0,
       "customSize": false,
@@ -55,6 +39,22 @@
       "x": 233,
       "y": 406,
       "zOrder": 2,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 93,
+      "layer": "",
+      "locked": false,
+      "name": "GameName",
+      "persistentUuid": "dc6081cc-0e22-4e22-83b0-22f7cb02c389",
+      "width": 488,
+      "x": 86,
+      "y": 120,
+      "zOrder": 3,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -207,6 +207,23 @@
           ]
         }
       ]
+    },
+    {
+      "name": "GameName",
+      "tags": "",
+      "type": "BBText::BBText",
+      "variables": [],
+      "behaviors": [],
+      "content": {
+        "text": " [outline=yellow][shadow=yellow][b][i]Word Game[/i][/b][/shadow][/outline]",
+        "opacity": 255,
+        "fontSize": 80,
+        "visible": true,
+        "color": "#ffffff",
+        "fontFamily": "",
+        "align": "center",
+        "wordWrap": true
+      }
     }
   ],
   "events": [

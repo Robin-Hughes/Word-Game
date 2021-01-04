@@ -951,7 +951,7 @@
       "height": 400,
       "name": "Background",
       "tags": "",
-      "texture": "gfx\\background.png",
+      "texture": "gfx\\stars.jpg",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 400,
       "variables": [],
@@ -990,9 +990,9 @@
       "font": "",
       "characterSize": 40,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 255,
+        "g": 255,
+        "r": 255
       }
     },
     {
@@ -3103,7 +3103,7 @@
               },
               "parameters": [
                 "",
-                "\"Level2\"",
+                "\"Level3\"",
                 ""
               ],
               "subInstructions": []

@@ -545,6 +545,24 @@
         "metadata": "",
         "name": "sound\\sfx_lose.ogg",
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/stars.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\stars.jpg",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "gfx/shield.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "gfx\\shield.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -576,7 +594,7 @@
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/layouts/new-scene"
+      "referenceTo": "/layouts/level4"
     }
   ],
   "externalEvents": [],
